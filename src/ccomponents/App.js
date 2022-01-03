@@ -1,7 +1,9 @@
 import TextForm from "./TextForm";
 const App = () => {
     return (
-        <TextForm heading={'Enter data to anlyaz...'} />
+        <div className="container">
+            <TextForm heading={'Enter data to anlyaz...'} />
+        </div>
     )
 }
 
