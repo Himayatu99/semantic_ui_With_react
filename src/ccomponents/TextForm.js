@@ -14,6 +14,21 @@ function TextForm(props) {
         const textChange = text.toLowerCase()
         setText(textChange)
     }
+    const handleClear = () => {
+        const textClear = "";
+        setText(textClear)
+    }
+    const handleCopy = () => {
+        const copy = document.getElementById('mybox')
+        copy.select();
+        navigator.clipboard.writeText(copy.value)
+    }
+    // Remove Extra spaces 
+    const handleExtraSpaces = () => {
+        const extraSpaces = text.split(/[ ]+/)
+        setText(extraSpaces.join(''))
+    }
+
     const [text, setText] = useState('Welcome')
     return (
         <>
@@ -31,6 +46,19 @@ function TextForm(props) {
                     <Icon name="arrow up" />
                     convert to LowerCase
                 </Button>
+                <Button color='red' onClick={handleClear}>
+                    <Icon name='trash' />
+                    Clear
+                </Button>
+                <Button color='red' onClick={handleCopy}>
+                    <Icon name='copy' />
+                    Copy Text
+                </Button>
+                <Button color='red' onClick={handleExtraSpaces}>
+                    <Icon name='copy' />
+                    Remove Extra spaces
+                </Button>
+
             </div>
             <div>
                 <h2>Your text Summary</h2>
