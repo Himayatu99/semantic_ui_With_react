@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Card, Image, Icon, Button } from "semantic-ui-react";
-const Accordion = () => {
+const Accordion = (props) => {
     const [myStyle, setMyStyle] = useState({
         color: "black",
         backgroundColor: "white"
@@ -31,7 +31,7 @@ const Accordion = () => {
     return (
         <Card className="container" >
             <Card.Content >
-                <Card.Header style={myStyle}>Matthew</Card.Header>
+                <Card.Header style={myStyle} >Matthew</Card.Header>
                 <Card.Meta>
                     <span className='date' style={myStyle}>Joined in 2015</span>
                 </Card.Meta>

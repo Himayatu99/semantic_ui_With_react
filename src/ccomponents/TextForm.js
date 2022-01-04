@@ -25,7 +25,7 @@ function TextForm(props) {
     }
     // Remove Extra spaces 
     const handleExtraSpaces = () => {
-        const extraSpaces = text.split(/[ ]+/)
+        const extraSpaces = text.split(/[ y]+/)
         setText(extraSpaces.join(''))
     }
 
@@ -55,7 +55,7 @@ function TextForm(props) {
                     Copy Text
                 </Button>
                 <Button color='red' onClick={handleExtraSpaces}>
-                    <Icon name='eraser' />
+                    <Icon name='erase' />
                     Remove Extra spaces
                 </Button>
 
