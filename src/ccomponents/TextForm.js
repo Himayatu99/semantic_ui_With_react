@@ -55,7 +55,7 @@ function TextForm(props) {
                     Copy Text
                 </Button>
                 <Button color='red' onClick={handleExtraSpaces}>
-                    <Icon name='copy' />
+                    <Icon name='eraser' />
                     Remove Extra spaces
                 </Button>
 
